@@ -1,0 +1,180 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin-left: 100px;
+    font-family: 'Orbitron', sans-serif;
+    background: url(/1.png); /* Replace with the URL of your desired background */
+    background-size: cover;
+    color: #ffffff; /* Update the default font color for better readability */
+    overflow: auto; 
+}
+
+.main-container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    display: none; /* Hidden until preloader finishes */
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Updated to a semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #00ffcc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 50px 0;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.neon-title {
+    font-size: 5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+}
+
+.neon-subtitle {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.349);
+    font-size: 1.5rem;
+    color: orangered;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Button Styles */
+.neon-button {
+    background-color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 15px 40px;
+    color: #ffffff; /* Updated to white */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.neon-button:hover {
+    background-color: #00ffcc;
+    color: #101010;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #ff00ff;
+}
+
+/* Forms Section */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Input Styles */
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #ffffff; /* Updated to white */
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+/* Button Styles */
+.form-button {
+    background-color: #00ffcc;
+    border: none;
+    padding: 15px;
+    color: #101010;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* Button Hover Effect */
+.form-button:hover {
+    background-color: #ff00ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px rgba(255, 0, 255, 0.5);
+}
+
+/* MetaMask Button Styles */
+.metamask-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8833a;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.metamask-button:hover {
+    background-color: #b46b28;
+}
+
+/* MetaMask Logo */
+.metamask-logo {
+    width: 30px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Spacing between logo and text */
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+}

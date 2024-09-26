@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Arena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/icon.png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <header class="hero-section">
+            <h1 class="neon-title">Welcome to the Battle Zone</h1>
+            <p class="neon-subtitle">Where Legends Rise in a Digital World</p>
+        </header>
+
+        <!-- Form Section -->
+        <section class="form-container">
+            <div class="form-box" id="formBox">
+                <h2 class="form-title" id="formTitle">Admin Login</h2>
+                <form id="userForm">
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="submit" class="form-button">Login</button>
+                </form>
+                <button class="metamask-button" id="metamaskLogin">
+                    <img src="/metamask logo.png" alt="MetaMask Logo" class="metamask-logo"> 
+                    Login with MetaMask
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Battle Arena - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

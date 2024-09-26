@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="final.css"> <!-- Link to the CSS file -->
+    <link rel="icon" href="/icon.png">
+</head>
+<body>
+
+    <!-- Prize Pool Section -->
+    <div class="prize-pool fade-in">
+        <h2>Prize Pool</h2>
+        <p>$1,000,000</p>
+        <p id="unique-id" class="unique-id"></p> <!-- Placeholder for unique ID -->
+    </div>
+
+    <!-- Dropdown Buttons Section -->
+    <div class="dropdown-container fade-in">
+        <!-- Players Dropdown -->
+        <div class="dropdown fade-in">
+            <label class="dropdown-label" for="players">Players</label>
+            <select id="players">
+                <option value="player1">Player 1 - 0x123...ABC</option>
+                <option value="player2">Player 2 - 0x456...DEF</option>
+                <option value="player3">Player 3 - 0x789...GHI</option>
+            </select>
+        </div>
+
+        <!-- Evaluator Dropdown -->
+        <div class="dropdown fade-in">
+            <label class="dropdown-label" for="evaluators">Evaluator</label>
+            <select id="evaluators">
+                <option value="evaluator1">Evaluator 1 - 0xAAA...111</option>
+                <option value="evaluator2">Evaluator 2 - 0xBBB...222</option>
+                <option value="evaluator3">Evaluator 3 - 0xCCC...333</option>
+            </select>
+        </div>
+
+        <!-- Post Tournament Dropdown -->
+        <div class="dropdown fade-in">
+            <label class="dropdown-label" for="postTournament">Post Tournament</label>
+            <select id="postTournament">
+                <option value="1st">1st Place - $500,000</option>
+                <option value="2nd">2nd Place - $300,000</option>
+                <option value="3rd">3rd Place - $200,000</option>
+            </select>
+        </div>
+
+        <!-- Rules Section -->
+        <div class="rules fade-in">
+            <h2>Rules and Regulations</h2>
+            <p>
+                Entry Price: $100<br>
+                Note: This fee is non-refundable after registration.<br>
+                Any form of cheating will result in disqualification and banning of both the team and the players.<br>
+                The unique ID provided will be for one-time use only and will have a lifespan of 24 hours.
+            </p>
+        </div>
+    </div>
+
+    <script src="final.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

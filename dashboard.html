@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Link to your CSS file -->
+    <link rel="icon" href="/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for the graph -->
+    <style>
+        html {
+            scroll-behavior: smooth; /* Add smooth scrolling behavior */
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="main-container" style="display: none;"> <!-- Initially hidden -->
+        <!-- Navigation Bar -->
+        <nav>
+            <h1 class="neon-title">Esports Admin Dashboard</h1>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h2 class="neon-subtitle">Manage Tournaments Effectively</h2>
+        </div>
+
+        <!-- Overview Cards -->
+        <div class="overview-cards">
+            <a href="tournament-history.html" class="card fade-in">
+                <h3>Total Number of Tournaments Hosted</h3>
+                <p id="total-tournaments-count">50</p> <!-- Total tournaments count -->
+            </a>
+            <a href="#pending-approvals" class="card fade-in">
+                <h3>Pending Approvals</h3>
+                <p id="pending-approvals-count">0</p>
+            </a>
+            <a href="#ongoing-tournaments" class="card fade-in">
+                <h3>Ongoing Tournaments</h3>
+                <p id="ongoing-tournaments-count">0</p>
+            </a>
+            <a href="create.html" class="card fade-in">
+                <h3>Create New Tournament</h3>
+                <p>+</p>
+            </a>
+        </div>
+
+        <!-- Tournament Graph -->
+        <div class="tournament-graph fade-in">
+            <h2>Tournament Trends</h2>
+            <canvas id="tournamentChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Pending Tournament Approvals -->
+        <div class="pending-approvals fade-in" id="pending-approvals">
+            <h2>Pending Tournament Approvals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tournament Name</th>
+                        <th>Entry Fee</th>
+                        <th>Start Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="pending-table-body">
+                    <!-- Dynamic content will be injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Ongoing Tournaments -->
+        <div class="ongoing-tournaments fade-in" id="ongoing-tournaments">
+            <h2>Ongoing Tournaments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tournament Name</th>
+                        <th>Entry Fee</th>
+                        <th>Participants</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ongoing-table-body">
+                    <!-- Dynamic content will be injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 Battle Arena. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

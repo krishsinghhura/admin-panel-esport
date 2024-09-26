@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin-left: 100px;
+    font-family: 'Orbitron', sans-serif;
+    background: url('/1.png'); /* Replace with the URL of your background */
+    background-size: cover;
+    color: #ffffff;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.main-container {
+    display: none; /* Hidden until preloader finishes */
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #00ffcc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.neon-title {
+    font-size: 2rem;
+    color: #00ffcc;
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+}
+
+.neon-subtitle {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    color: orangered;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Overview Cards */
+.overview-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #ff00ff;
+    text-decoration: none; /* Remove underline for links */
+    color: #ffffff; /* Card text color */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card h3 {
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 2rem;
+}
+
+/* Tournament Graph */
+.tournament-graph {
+    margin-bottom: 50px;
+}
+
+.tournament-graph h2 {
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+canvas {
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Pending Tournament Approvals */
+.pending-approvals,
+.ongoing-tournaments {
+    margin-bottom: 50px;
+}
+
+.pending-approvals h2,
+.ongoing-tournaments h2 {
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff00ff;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00ffcc;
+}
+
+tbody td {
+    padding: 10px;
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #ffffff;
+    text-align: center;
+}
+
+.approve-btn, .decline-btn {
+    background-color: #00ffcc;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.approve-btn:hover, .decline-btn:hover {
+    background-color: #ff00ff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer p {
+    color: #ffffff;
+}
+
+/* Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
